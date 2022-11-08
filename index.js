@@ -1,16 +1,33 @@
+//constants and styles for the grid
 let masterDiv = document.getElementById("container");
 const squares = document.createElement('div');
-squares.style.width = "16px";
-squares.style.height = "16px";
-squares.style.border = "solid";
+
+// main container
+masterDiv.style.display = "grid";
+masterDiv.style.border = "solid"
+let masterHeight = 700;
+let masterWidth = 700;
+masterDiv.style.height = masterHeight + 'px';
+masterDiv.style.width = masterWidth + 'px';
+
+
+//squares
+squares.style.border = "solid black";
 squares.style.backgroundColor = "white";
 squares.style.borderWidth = "1px";
 
 
 
-//creating 16x16 grid
-for (let j=0; j<16; j++){
-for (let i=0; i<16; i++){
+
+//constants for the slider
+const slider = document.getElementById("myRange");
+const sliderAmount = document.getElementById("gridSize")
+
+
+
+//creating grid based off slider value
+for (let j=0; j<slider.value; j++){
+for (let i=0; i<slider.value; i++){
 masterDiv.appendChild(squares.cloneNode(true))
 }
 }
@@ -21,19 +38,25 @@ masterDiv.addEventListener('mouseover', (e) => {
 });
 
 
-
-
-
-
-
 //range for the slider
 document.addEventListener("DOMContentLoaded", function() {
-const slider = document.getElementById("myRange");
-const sliderAmount = document.getElementById("gridSize")
-sliderAmount.innerHTML = slider.value + "x" + slider.value;
 
+    sliderAmount.innerHTML = slider.value + "x" + slider.value;
 slider.oninput = function() {
     sliderAmount.innerHTML = this.value + "x" + this.value
 }
 })
 
+
+let currentValue = slider.value;
+
+//squares cont
+
+let squareHeight = masterHeight / currentValue
+let squareWidth = masterWidth / currentValue
+squares.style.height = squareHeight;
+squares.style.height = squareWidth;
+
+
+masterDiv.style.gridTemplateColumns = `repeat(${currentValue}, 1fr)`;
+masterDiv.style.gridTemplateRows = `repeat(${currentValue}, 1fr)`;
