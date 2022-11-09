@@ -79,7 +79,21 @@ border-radius: 20px;
 opacity: 1;
 }
 
+#colourpicker{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    border: none;
+    cursor: pointer;
+}
 
+#colourpicker::-webkit-color-swatch{
+border-radius: 50%;
+border: 7px solid black;
+}
 
 
 
