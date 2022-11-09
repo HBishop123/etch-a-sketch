@@ -68,7 +68,7 @@ e.target.style.backgroundColor = "white"
 });
 
 // change colour to random colour
-let rainbowColours = ["#ff0000", "#0000ff", "#ffff00", "#008000"];
+let rainbowColours = ["#ff0000", "#0000ff", "#ffff00", "#008000", "#ffa500", "#4b0082", "#8f00ff"];
 rainbowChoice.addEventListener('click', function(){
 masterDiv.addEventListener('mouseover', (e) => {
 e.target.style.backgroundColor = rainbowColours[Math.floor(Math.random() * rainbowColours.length)];
