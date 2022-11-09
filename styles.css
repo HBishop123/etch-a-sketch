@@ -95,6 +95,13 @@ border-radius: 50%;
 border: 7px solid black;
 }
 
+#rainbow{
+background: linear-gradient(45deg, red, orange, yellow, green, blue);
+border: none;
+width: 150px;
+height: 150px; 
+cursor: pointer;  
+border-radius: 50%; }
 
 
      
