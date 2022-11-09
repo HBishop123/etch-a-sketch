@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -18,10 +21,30 @@ body{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding-top: 10px;
+    background-color: rgb(149, 146, 146);
 }
 
+#title {
+    font-family: "Secular One";
+    align-self: center;
+    font-size: 60px;
+    
+}
 
-#slider-container{
+.buttonandcontainer{
+
+
+
+
+}
+
+.buttons{
+
+
+}
+#sli
+der-container{
     width: 25%;
 }
 
