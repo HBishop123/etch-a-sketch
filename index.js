@@ -75,6 +75,7 @@ e.target.style.backgroundColor = rainbowColours[Math.floor(Math.random() * rainb
 })
 });
 
+
 //range for the slider
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -96,5 +97,4 @@ for (let j=0; j<currentValue; j++){
 for (let i=0; i<currentValue; i++){
 masterDiv.appendChild(squares.cloneNode(true))
 }}
-
 })
