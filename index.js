@@ -21,9 +21,9 @@ masterDiv.style.minWidth = masterWidth + 'px';
 
 //squares
 
-squares.style.border = "solid black";
+squares.style.border = "solid grey";
 squares.style.backgroundColor = "white";
-squares.style.borderWidth = "1px";
+squares.style.borderWidth = "0.5px";
 
 //squares cont
 let currentValue = slider.value;
@@ -47,12 +47,32 @@ masterDiv.style.gridTemplateColumns = `repeat(${currentValue}, 1fr)`;
 masterDiv.style.gridTemplateRows = `repeat(${currentValue}, 1fr)`;
 
 
-//event listener for hover over grid = change colour
+
+//event listener for hover over grid = change colour to chosen colour
 let colourChoice = document.getElementById("colourpicker");
+let rainbowChoice = document.getElementById("rainbow");
+let eraserChoice = document.getElementById("eraser");
+
+
+colourChoice.addEventListener('click', function(){
 masterDiv.addEventListener('mouseover', (e) => {
-    e.target.style.backgroundColor = colourChoice.value
+e.target.style.backgroundColor = colourChoice.value
+})
 });
 
+//change to eraser
+eraserChoice.addEventListener('click', function(){
+masterDiv.addEventListener('mouseover', (e) => {
+e.target.style.backgroundColor = "white"
+})
+});
+
+// change colour to random colour
+rainbowChoice.addEventListener('click', function(){
+masterDiv.addEventListener('mouseover', (e) => {
+e.target.style.backgroundColor = "red"
+})
+});
 
 //range for the slider
 document.addEventListener("DOMContentLoaded", function() {
@@ -63,6 +83,7 @@ slider.oninput = function() {
 }
 })
 
+//new grid when slider is moved
 slider.addEventListener("change", () => {
 masterDiv.innerHTML = ""
 let currentValue = slider.value;
