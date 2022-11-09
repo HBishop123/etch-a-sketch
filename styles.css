@@ -80,20 +80,26 @@ opacity: 1;
 }
 
 #colourpicker{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    width: 150px;
-    height: 150px;
-    border: none;
-    cursor: pointer;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background-color: transparent;
+width: 150px;
+height: 150px;
+border: none;
+cursor: pointer;
+position: relative;
 }
 
 #colourpicker::-webkit-color-swatch{
 border-radius: 50%;
 border: 7px solid black;
 }
+
+#colourpicker:active {
+top: -10px;
+}
+    
 
 #rainbow{
 background: linear-gradient(45deg, red, orange, yellow, green, blue);
@@ -103,8 +109,12 @@ height: 150px;
 cursor: pointer;  
 border-radius: 50%;
 border: 7px solid black;
+position: relative;
 }
 
+#rainbow:active{
+top: -10px;
+}
 
 #eraser{
 background-color: white;
@@ -116,5 +126,10 @@ border-radius: 50%;
 border: 7px solid black;
 font-family: "Secular One";
 font-size: 16px;
+position: relative;
+}
 
-}   
+#eraser:active{
+top: -10px;
+}
+
