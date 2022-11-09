@@ -29,22 +29,27 @@ body{
     font-family: "Secular One";
     align-self: center;
     font-size: 60px;
-    
+        
 }
 
 .buttonandcontainer{
-
-
-
-
+    display: flex;
+    align-items: center;
+    padding-right: 350px;
 }
 
 .buttons{
-
-
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-right: 300px;
+    
+    
 }
-#sli
-der-container{
+
+
+
+#slider-container{
     width: 25%;
 }
 

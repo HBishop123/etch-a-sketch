@@ -12,7 +12,7 @@ const sliderAmount = document.getElementById("gridSize")
 
 masterDiv.style.display = "grid";
 masterDiv.style.border = "solid"
-let masterHeight = 700;
+let masterHeight = 600;
 let masterWidth = 700;
 masterDiv.style.height = masterHeight + 'px';
 masterDiv.style.width = masterWidth + 'px';
