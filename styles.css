@@ -35,14 +35,14 @@ body{
 .buttonandcontainer{
     display: flex;
     align-items: center;
-    padding-right: 350px;
+   
 }
 
 .buttons{
     display: flex;
     flex-direction: column;
     gap: 60px;
-    padding-right: 300px;
+   
     
     
 }
