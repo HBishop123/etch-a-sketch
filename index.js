@@ -16,6 +16,8 @@ let masterHeight = 600;
 let masterWidth = 700;
 masterDiv.style.height = masterHeight + 'px';
 masterDiv.style.width = masterWidth + 'px';
+masterDiv.style.minHeight = masterHeight + 'px';
+masterDiv.style.minWidth = masterWidth + 'px';
 
 //squares
 
@@ -46,8 +48,9 @@ masterDiv.style.gridTemplateRows = `repeat(${currentValue}, 1fr)`;
 
 
 //event listener for hover over grid = change colour
+let colourChoice = document.getElementById("colourpicker");
 masterDiv.addEventListener('mouseover', (e) => {
-    e.target.style.backgroundColor = "purple"
+    e.target.style.backgroundColor = colourChoice.value
 });
 
 
